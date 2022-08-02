@@ -9,7 +9,6 @@ const Layout = ({children}) => {
     <div className={styles.container}>
         <main className={styles.main}>
         <Header/>
-        <h1>Learning Next.js</h1>
             {children}
         </main>
     </div>

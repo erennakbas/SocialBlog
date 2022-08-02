@@ -1,24 +1,27 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Layout.module.css'
-import ArticleList from '../components/ArticleList'
-export default function Home({articles}) {
+import PostList from '../components/PostList'
+import { useSelector } from 'react-redux'
+import { selectUser } from '../features/userSlice'
+export default function Home({posts}) {
   return (
     <div className={styles.container}>
       <Head>
         <title>Eren's Personal Web Site</title>
         <meta name='keywords' content='web, site, development, eren, programming'></meta>
       </Head>
-      <ArticleList articles={articles}/>
+      <PostList posts={posts}/>
     </div>
   )
 }
 export const getStaticProps = async() => {
-   const response = await fetch('https://jsonplaceholder.typicode.com/posts/?_limit=5');
-   const articles = await response.json()
+   const response = await fetch('https://dummyjson.com/posts?limit=5');
+   const data = await response.json()
+
    return {
       props : {
-        articles
+        posts : data.posts
       }
    }
 }
