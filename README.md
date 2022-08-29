@@ -1,5 +1,5 @@
 
-I've used https://dummyjson.com/ to simulate this project. You should set BASE_URL variable to https://dummyjson.com/ in when you are creating your environment file (.env). Also https://dummyjson.com/docs/auth you can use this link to login.
+I've used https://dummyjson.com to simulate this project. You should set BASE_URL variable to https://dummyjson.com in when you are creating your environment file (.env). Also https://dummyjson.com/docs/auth you can use this link to login.
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
