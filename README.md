@@ -1,6 +1,6 @@
 
 I've used https://dummyjson.com/ to simulate this project. You should set BASE_URL variable to https://dummyjson.com/ in when you are creating your environment file (.env). Also https://dummyjson.com/docs/auth you can use this link to login.
-
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
