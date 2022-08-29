@@ -8,7 +8,7 @@ const PostList = ({posts}) => {
             return <Link key={post.id} href="/post/[id]" as={`/post/${post.id}`}>
                         <a className={styles.card}>
                             <h4>{post.title}</h4>
-                            <p>{post.body}</p>
+                            <p>{post.body.substring(0,100)+'...'}</p>
                         </a>
                     </Link>
         })}

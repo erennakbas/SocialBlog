@@ -2,33 +2,18 @@ import React from 'react'
 import Head from 'next/head'
 import Link from 'next/link';
 import {useDispatch } from 'react-redux';
-import { authenticate } from '../features/userSlice';
+import { decodedToken } from '../helpers';
 import serialize from 'form-serialize';
 import { useRouter } from 'next/router';
+import BlogFunctions from '../services/blog.functions';
 const login = () => {
+  const blogFunctions = BlogFunctions.create()
   const dispatch = useDispatch();
   const router = useRouter()
   async function handleLogin(e){
     e.preventDefault()
     var formData= serialize(e.target,{hash:true})
-    const res = await fetch('https://dummyjson.com/auth/login', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      
-      username: formData.username,
-      password: formData.password,
-      expiresInMins: 180
-    })           
-    })
-    if (res.status==400){
-      console.log('Invalid credentials.')
-      alert('Invalid credentials.')
-      return;
-    }
-    const data = await res.json();
-    dispatch(authenticate(data));
-    router.push('/')
+    blogFunctions.authenticate(formData.username, formData.password, dispatch, router)
 }
   return (
     <div>
@@ -43,7 +28,7 @@ const login = () => {
                 <div className="row g-0">
                   <div className="col-md-6 col-lg-5 d-none d-md-block">
                     <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img1.webp"
-                      alt="login form" className="img-fluid" style={{borderRadius: "1rem 0 0 1rem;"}} />
+                      alt="login form" className="img-fluid" style={{borderRadius: "1rem 0 0 1rem"}} />
                   </div>
                   <div className="col-md-6 col-lg-7 d-flex align-items-center">
                     <div className="card-body p-4 p-lg-5 text-black">
@@ -76,8 +61,6 @@ const login = () => {
                           Don't have an account?  
                           <Link href="/signup"style={{color: "#393f81"}}> Register here </Link>
                         </p>
-                        {/* <a href="#!" className="small text-muted">Terms of use.</a>
-                        <a href="#!" className="small text-muted">Privacy policy</a> */}
                       </form>
 
                     </div>

@@ -9,21 +9,17 @@ export const userSlice = createSlice({
   name: 'user',
   initialState,
   reducers: {
-    authenticate: (state, action) => {
+    setUser: (state, action) => {
       state.user = action.payload
-      localStorage.setItem('access-token', action.payload.token);
-      state.isAuthenticated=true;
     },
-    logout:(state)=>{
-      state.user = {}
-      localStorage.removeItem('access-token');
-      state.isAuthenticated=false;
-    }    
+    setIsAuthenticated: (state,action) => {
+      state.isAuthenticated=action.payload
+    }   
   }
 })
 
 // Action creators are generated for each case reducer function
-export const { authenticate, logout } = userSlice.actions;
+export const {setUser, setIsAuthenticated } = userSlice.actions;
 export const selectUser = (state) => state.user.user;
-export const selectAuthenticated = (state) => state.isAuthenticated;
+export const selectIsAuthenticated = (state) => state.user.isAuthenticated;
 export default userSlice.reducer
