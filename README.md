@@ -1,4 +1,4 @@
-This project is developed to discover the features of Next.js and to simulate the JWT on frontend. Most of the requests that are made in the project doesn't effect anything. Because I've used https://dummyjson.com as API. You should set BASE_URL variable to https://dummyjson.com when you are creating your environment file (.env). You can use this link to get the username and password for login page https://dummyjson.com/docs/auth. Signup page doesn't work.
+This project is developed to discover the features of Next.js and to simulate the JWT on frontend which you can review from services and helpers directory. Most of the requests that are made in the project doesn't effect anything. Because I've used https://dummyjson.com as API. You should set BASE_URL variable to https://dummyjson.com when you are creating your environment file (.env). You can use this link to get the username and password for login page https://dummyjson.com/docs/auth. Signup page doesn't work.
 
 ## Getting Started
 
