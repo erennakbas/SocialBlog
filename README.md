@@ -1,9 +1,4 @@
-
-I've used https://dummyjson.com to simulate this project. You should set BASE_URL variable to https://dummyjson.com in when you are creating your environment file (.env). Also https://dummyjson.com/docs/auth you can use this link to login.
-
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This project is developed to discover the features of next.js and to simulate the JWT on frontend. Most of the requests that are made in the project doesn't effect anything. Because I've used https://dummyjson.com as an API to simulate this project. You should set BASE_URL variable to https://dummyjson.com in when you are creating your environment file (.env). Also https://dummyjson.com/docs/auth you can use this link to login.
 
 ## Getting Started
 
@@ -14,14 +9,7 @@ npm run dev
 # or
 yarn dev
 ```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## Some screenshots from the project
 
 ## Learn More
 
