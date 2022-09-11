@@ -11,6 +11,12 @@ yarn dev
 ```
 ## Some screenshots from the project
 
+![1](https://user-images.githubusercontent.com/72765259/189530207-ba7b969d-49b8-48ef-9dd2-bbe717f38112.png)
+
+![2](https://user-images.githubusercontent.com/72765259/189530212-ff3c8630-27df-46c1-b9b1-2b63d5dbe26e.png)
+
+![4](https://user-images.githubusercontent.com/72765259/189530215-0c81f86e-264b-4b97-a3f4-899823c0c770.png)
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
